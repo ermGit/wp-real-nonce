@@ -85,7 +85,7 @@ class Wp_Real_Nonce {
 		}
 
 		if ( $return ) {
-			if ( ! in_array( static::$verified_nonces ) ) {
+			if ( ! in_array( $nonce, static::$verified_nonces ) ) {
 				static::$verified_nonces[] = $nonce;
 			}
 		} else {
